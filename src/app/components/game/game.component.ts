@@ -96,13 +96,9 @@ export class GameComponent implements OnInit, AfterViewInit {
 }
 
   loadPlayerImages() {
-    const busra = new Image();
-    busra.src = './busra.png'; // Busra resmi, projenin assets klasörüne ekle
-    const ulas = new Image();
-    ulas.src = './ulas.png'; // Ulaş resmi, aynı şekilde
-
-    this.playerImages['Büşra'] = busra;
-    this.playerImages['Ulaş'] = ulas;
+    const ibo = new Image();
+    ibo.src = './ibo.png'; // Ulaş resmi, aynı şekilde
+    this.playerImages['Ibo'] = ibo;
   }
 
   selectPlayer(name: string) {
@@ -124,17 +120,17 @@ export class GameComponent implements OnInit, AfterViewInit {
       case 'easy':        
         this.gravity = 0.7;
         this.difficultySpeed = 1;
-        this.wonMessage = "Sevgilim onca engeli benim için mi geçtin ?😝";
+        this.wonMessage = "Naprawdę ? 😝";
         break;
       case 'normal':
         this.gravity = 0.8;
         this.difficultySpeed = 3;
-        this.wonMessage = "Ooo seviyeyi arttırdık bakıyorum 😜";
+        this.wonMessage = "Zacząłeś grać coraz lepiej 😜";
         break;
       case 'hard':
         this.gravity = 0.9;
         this.difficultySpeed = 5;
-        this.wonMessage = "Hızlı ve sexy sevgilim 😎";
+        this.wonMessage = "Trzeba być bardzo głodnym, żeby osiągnąć ten poziom 😎";
         break;
     }
 
@@ -305,12 +301,10 @@ this.obstacles.forEach((obs, index) => {
 onObstaclePassed() {
   this.obstacleCount++;
 
-  if (this.obstacleCount >= 10 && this.selectedPlayer == "Büşra") {
+  if (this.obstacleCount >= 10) {
+   
     this.gameWon = true;
-    this.stopGameWithWinMessage();
-  }else if(this.obstacleCount >= 10 && this.selectedPlayer != "Büşra"){
-    this.gameWon = true;
-    this.wonMessage = "Sen avucunu yala Ulaş 💩";
+    this.wonMessage = "Gratulacje, zagramy jeszcze raz? 💩";
     this.stopGameWithWinMessage();
   }
 }

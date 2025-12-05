@@ -1,41 +1,34 @@
-<!-- Sabit Müzik Butonu -->
+<!-- Sabit Müzik Butonu
 <button (click)="toggleMusic()" 
         class="fixed bottom-4 right-4 bg-red-600 text-white p-4 rounded-2xl shadow-xl hover:bg-red-700 transition-all duration-300 transform hover:scale-105 z-20">
-  <i [class.fas]="!isPlaying" [class.fa-play]="!isPlaying" [class.fa-pause]="isPlaying"></i> <!-- Play/Pause simgeleri -->
+  <i [class.fas]="!isPlaying" [class.fa-play]="!isPlaying" [class.fa-pause]="isPlaying"></i> 
 </button>
+-->
+ 
 <app-header></app-header>
 
 <div class="loader-container" *ngIf="isLoading">
   <div class="heart"></div>
-  <div class="countdown-text">Sürprizine son ... {{ countdown }} sn</div>
+  <div class="countdown-text">Loading ... {{ countdown }} sn</div>
 </div>
 
 <router-outlet *ngIf="!isLoading"></router-outlet>
 
 <!-- HOŞGELDİN BÖLÜMÜ -->
 <section id="home" class="flex flex-wrap justify-center gap-6 mt-10 bg-white/5 backdrop-blur-md p-4 rounded-2xl shadow-lg">
-  <h1 class="italic text-5xl font-extrabold text-white mb-6">Hikayemiz</h1>
+  <h1 class="italic text-5xl font-extrabold text-white mb-6">Ibo Falafel</h1>
   <p class="italic text-lg max-w-prose text-left text-white ">
-    Selam sevgilim, umarım bu küçük sürprizimi beğenmişsindir. Bu web sitesini tasarlamam biraz vakit aldı.
-    Sana beyaz bir yalan söylemiş olabilirim, aslında nöbet planlama projesi ile uğraşmıyordum. 
-    Sevgilim, yüzünden gülümseme hiç eksik olmasın ve bugünü (1 Haziran) her zaman bir tebessüm ile hatırla. 
-    Şimdi gelelim bu web sitesinin neler yaptığına, öncelikle eğer müzik dinlemek istersin sağ altta bulunan play butonuna basabilirsin.
-    Sonrasında da birlikte biriktirdiğimiz birsürü anılardan en beğendiklerimi görebilirsin. 
-    Eğer vaktim kalırsa her fotoğrafın altına anısını da yazmak istiyorum. Ayrıca mini bir de anketimiz var, bakalım kaç soruya aynı cevabı vereceğiz.
-    Böyle birşey yapma fikri nereden geldi diye soracak olursan da hemen cevap vereyim.
-    Sana her doğum gününde bakıp gülümseyebileceğin, ya da her için sıkıldığında biraz olsun içini rahatlatabilecek bir hediye vermekti amacım. 
-    Umarım başarılı olmuşumdur ve sen her bu siteyi açtığında ne sıkıntın varsa gider ya da her doğum gününde birlikte yeni anılar yeni yazılar yazarız buraya.
-    İyi ki doğdun sevgilim 🎂 
+    
   </p>
   <p class="italic text-base max-w-prose text-left text-white ">
-   <br> ✒️
-   <br>  Baharın tazeliğini hissettirir her gülüşün,
-   <br>  Ümitler taşır bana her dokunuşun,
-   <br>  Şefkatin sarar, dinlendirir tenimi,
-   <br>  Renklendirir heryeri sanki sihirli gözlerin,
-   <br>  Aşk dedikleri bu baksana eritti sanki DEMİR'i.
-   <br> ☝️
-   <br>  Sen farkettin mi bilmem ama, satırların baş harfleri sana birini hatırlatıyor mu acaba 🤔
+   <br> 
+   <br> 
+   <br>  
+   <br>  
+   <br>  
+   <br> 
+   <br> 
+   <br>
   </p>
 </section>
 
@@ -43,10 +36,10 @@
 <section id="gallery" class="flex flex-wrap justify-center gap-6 mt-10 bg-white/5 backdrop-blur-md p-4 rounded-2xl shadow-lg">
   <h2 class="text-3xl font-bold text-white text-center mb-8">Galeri</h2>
   <div class="flex flex-wrap justify-center gap-6 mt-10">
-    <p class="italic text-lg justify-center max-w-prose text-left text-white ">Ayvalık 2025 Nişanımızdan sonra gitmiştik çok güzeldi.</p>
+    <p class="italic text-lg justify-center max-w-prose text-left text-white ">Sałatka</p>
     <img 
-      src="/photo1.jpg" 
-      alt="Birlikte çekildiğimiz ilk fotoğrafımız" 
+      src="/photo1.JPG" 
+      alt="Sałatka" 
       class="w-80 h-80 object-cover rounded-2xl transition duration-300" 
              (click)="toggleTransform(0)" 
              [ngClass]="{
@@ -54,10 +47,10 @@
     'rotate-2 scale-100': !isTransformed[0]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Alaçatı 2025 Zeynep Bastık konseri öncesi</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">kebab wegański</p>
     <img 
-      src="/photo2.jpg" 
-      alt="Unutulmaz tatil anımız" 
+      src="/photo2.JPG" 
+      alt="kebab wegański" 
       class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(1)" 
              [ngClass]="{
@@ -65,20 +58,20 @@
     '-rotate-3 scale-100': !isTransformed[1]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Alaçatı 2025 ot festivali enginar temalı</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Falafel i tortilla po grecku</p>
     <img 
-      src="/photo3.jpg" 
-      alt="Gülüştüğümüz anlardan biri" 
+      src="/photo3.JPG" 
+      alt="Falafel i tortilla po grecku" 
       class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(2)" 
              [ngClass]="{
     '-translate-y-3 -rotate-1 scale-150': isTransformed[2],
     '-rotate-3 scale-100': !isTransformed[2]
   }"
-    /><p class="italic text-lg justify-center max-w-prose text-center text-white ">Foça 2025 3 ay aradan sonra tekrar buluşup Foça'ya kaçmıştık.</p>
+    /><p class="italic text-lg justify-center max-w-prose text-center text-white ">Sok z granatów</p>
     <img 
-      src="/photo4.jpg" 
-      alt="Birlikte çekildiğimiz ilk fotoğrafımız" 
+      src="/photo4.JPG" 
+      alt="Sok z granatów" 
       class="w-80 h-80 object-cover rounded-2xl transition duration-300" 
              (click)="toggleTransform(3)" 
              [ngClass]="{
@@ -86,10 +79,10 @@
     '-rotate-2 scale-100': !isTransformed[3]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Wroclaw 2024 Wroclaw'da katedral tutu hava kapalı gösteriyordu ama biz yine de risk alıp çıkmıştık.</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Hummus z granatem</p>
     <img 
-      src="/photo5.jpg" 
-      alt="Unutulmaz tatil anımız" 
+      src="/photo5.JPG" 
+      alt="Hummus z granatem" 
       class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(4)" 
              [ngClass]="{
@@ -97,20 +90,20 @@
     '-rotate-3 scale-100': !isTransformed[4]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Oslo 2025 Oslo çarşıda bir yandan gezip bir yandan da Stanley bulmaya çalışıyorduk.</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">--</p>
     <img 
-      src="/photo6.jpg" 
-      alt="Gülüştüğümüz anlardan biri" 
+      src="/photo6.JPG" 
+      alt="--" 
       class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(5)" 
              [ngClass]="{
     '-translate-y-3 -rotate-1 scale-150': isTransformed[5],
     '-rotate-3 scale-100': !isTransformed[5]
   }"
-    /><p class="italic text-lg justify-center max-w-prose text-center text-white ">İzmir 2024 Anneler ve Esra ile bir pazar etkinliği inciraltında balık ekmek yiyip, top oynayıp sonrasında bisiklet turu yapmıştık <3</p>
+    /><p class="italic text-lg justify-center max-w-prose text-center text-white ">--</p>
     <img 
-      src="/photo7.jpg" 
-      alt="Birlikte çekildiğimiz ilk fotoğrafımız" 
+      src="/photo7.JPG" 
+      alt="--" 
       class="w-80 h-80 object-cover rounded-2xl transition duration-300" 
              (click)="toggleTransform(6)" 
              [ngClass]="{
@@ -118,10 +111,10 @@
     '-rotate-2 scale-100': !isTransformed[6]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Krakow 2024 Warşova gezisi öncesi günübirlik bile olsa Krakow'a gidip gezmiştik. Not sen Wrowclaw'daki noel ışıklarını daha çok beğenmiştin ^^</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">--</p>
     <img 
-      src="/photo8.jpg" 
-      alt="Unutulmaz tatil anımız" 
+      src="/photo8.JPG" 
+      alt="--" 
      class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(7)" 
              [ngClass]="{
@@ -129,20 +122,20 @@
     '-rotate-3 scale-100': !isTransformed[7]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Balıkesir 2025 Nişanımızdan en sevdiğim kare Esin çekmişti sanırım. Çok heyecanlıydım ^^</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">--</p>
     <img 
-      src="/photo9.jpg" 
-      alt="Gülüştüğümüz anlardan biri" 
+      src="/photo9.JPG" 
+      alt="--" 
       class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(8)" 
              [ngClass]="{
     '-translate-y-3 -rotate-1 scale-150': isTransformed[8],
     '-rotate-3 scale-100': !isTransformed[8]
   }"
-    /><p class="italic text-lg justify-center max-w-prose text-center text-white ">Çeşme 2025 Balıklı köşk önünde fotoğraf çekilirken annemin dik duru otlar demesine çok gülmüştük :D</p>
+    /><p class="italic text-lg justify-center max-w-prose text-center text-white ">--</p>
     <img 
-      src="/photo10.jpg" 
-      alt="Birlikte çekildiğimiz ilk fotoğrafımız" 
+      src="/photo10.JPG" 
+      alt="--" 
       class="w-80 h-80 object-cover rounded-2xl transition duration-300" 
              (click)="toggleTransform(9)" 
              [ngClass]="{
@@ -150,10 +143,10 @@
     '-rotate-2 scale-100': !isTransformed[9]
   }"
     />
-    <p class="italic text-lg justify-center max-w-prose text-center text-white ">Sen omuzunu açmıştın ben de dekolte olsun diye sana ayak uydurmuştum yine sevdiğim samimi pozlardan biri :)</p>
+    <p class="italic text-lg justify-center max-w-prose text-center text-white ">--</p>
     <img 
-      src="/photo11.jpg" 
-      alt="Unutulmaz tatil anımız" 
+      src="/photo11.JPG" 
+      alt="--" 
       class="w-80 h-80 object-cover rounded-2xl shadow-xl transition duration-300" 
              (click)="toggleTransform(10)" 
              [ngClass]="{
@@ -167,7 +160,7 @@
 <div id="game-container">
 <!--OYUN BÖLÜMÜ-->
 <section id="game" class="flex flex-wrap justify-center gap-6 mt-10 bg-white/5 backdrop-blur-md p-4 rounded-2xl shadow-lg">
-  <h2 class="text-3xl font-bold text-white text-center mb-8">Oyun Bölümü</h2>
+  <h2 class="text-3xl font-bold text-white text-center mb-8">Game Section</h2>
   <app-game *ngIf="showGame"></app-game>
 </section>
 </div>
@@ -178,7 +171,7 @@
  <section id="final" class="flex flex-wrap justify-center gap-6 mt-10 bg-white/5 backdrop-blur-md p-4 rounded-2xl shadow-lg">
   <iframe class="flex flex-wrap justify-center gap-6 mt-10 bg-white/5 backdrop-blur-md rounded-2xl shadow-lg" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ynWcMq1nDxmdstLNhFpY4?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   <h1 class="italic text-lg max-w-prose text-center text-white ">
-    💕Son olarak yukarıdakilerden hangisiyle dans etmek istersin ?</h1>
+  </h1>
   <p class="italic text-lg max-w-prose text-left text-white ">
 
   </p>

@@ -1,17 +1,16 @@
 <div class="menu" *ngIf="!gameStarted && !gameEnded && !playerSelected">
-  <h2>Aşk Koşusu 💖</h2>
-  <p>Oyuncu Seç</p>
-  <button (click)="selectPlayer('Büşra')">Büşra</button>
-  <button (click)="selectPlayer('Ulaş')">Ulaş</button>
+  <h2>Wyścig Ibo </h2>
+  <p>Wybrany gracz:</p>
+  <button (click)="selectPlayer('Ibo')">Ibo</button>
 </div>
 
 <div class="menu" *ngIf="playerSelected && !gameStarted && !gameEnded">
-  <h2>Aşk Koşusu 💖</h2>
-  <p>Seçilen Oyuncu: {{ selectedPlayer }}</p>
-  <p>Zorluk Seç</p>
-  <button (click)="startGame('easy')">Kolay</button>
+  <h2> Wyścig Ibo </h2>
+  <p>Wybrany gracz: {{ selectedPlayer }}</p>
+  <p>Wybierz poziom trudności</p>
+  <button (click)="startGame('easy')">Łatwy</button>
   <button (click)="startGame('normal')">Normal</button>
-  <button (click)="startGame('hard')">Zor</button>
+  <button (click)="startGame('hard')">Trudny</button>
 </div>
 
 <canvas
@@ -25,6 +24,6 @@
 
 <div class="end" *ngIf="gameEnded">
   <h2>Oyun Bitti 💘</h2>
-  <p> {{selectedPlayer}}: Senin için  {{ distance | number: '1.0-0' }} metre koştum 🥵</p>
-  <button (click)="restartGame()">Tekrar Oyna</button>
+  <p> {{selectedPlayer}}: Dystans, który przebiegłeś  {{ distance | number: '1.0-0' }} metr 🥵</p>
+  <button (click)="restartGame()">Zagraj ponownie</button>
 </div>
