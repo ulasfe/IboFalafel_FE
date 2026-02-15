@@ -4,6 +4,7 @@
   <i [class.fas]="!isPlaying" [class.fa-play]="!isPlaying" [class.fa-pause]="isPlaying"></i> 
 </button>
 -->
+
  
 <app-header></app-header>
 
@@ -11,6 +12,12 @@
   <div class="heart"></div>
   <div class="countdown-text">Loading ... {{ countdown }} sn</div>
 </div>
+
+<nav>
+  <a routerLink="/music">Music</a>
+  <a routerLink="/acting">Acting</a>
+  <a routerLink="/art">Art</a>
+</nav>
 
 <router-outlet *ngIf="!isLoading"></router-outlet>
 
