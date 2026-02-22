@@ -6,3 +6,5 @@
 body {
   font-family: 'Playpen Sans', cursive;
 }
+html, body { height: 100%; margin: 0; overflow: hidden; /* This kills the outermost browser scrollbar */}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -6,14 +6,23 @@ import { PollComponent } from './poll/poll.component';
 import { CommonModule } from '@angular/common';
 import { GameComponent } from './components/game/game.component';
 import { RouterModule } from '@angular/router';
+import { SlideshowComponent } from '../app/shared/slideshow/slideshow.component';
 
+interface Slide {
+  title: string;
+  image: string;
+  route: string;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [HeaderComponent, PollComponent,CommonModule,GameComponent,RouterModule],
+  imports: [SlideshowComponent,HeaderComponent, PollComponent,CommonModule,GameComponent,RouterModule],
   styleUrls: ['./app.component.css']
 })
+
+
+
 export class AppComponent implements OnInit {
   isLoading = true;
   title = 'hikayemiz';
@@ -23,9 +32,29 @@ export class AppComponent implements OnInit {
   isTransformed:boolean[] = [false,false,false,false,false,false,false,false,false,false,false];
   countdown = 30;
   countdownInterval: any;
-  
+  slides = [
+      {
+        title: 'Music',
+        image: '/photo1.jpg',
+        route: '/music'
+      },
+      {
+        title: 'Acting',
+        image: '/photo2.jpg',
+        route: '/acting'
+      },
+      {
+        title: 'Art',
+        image: '/photo3.jpg',
+        route: '/art'
+      }
+    ];
+  currentIndex = 0;
+  intervalId: any;
   toggleTransform(index: number) {
   this.isTransformed[index] = !this.isTransformed[index];
+
+  
 }
 
 @HostListener('window:scroll', [])
@@ -43,6 +72,8 @@ export class AppComponent implements OnInit {
       this.showGame = false;
     }
   }
+
+   
   
   ngOnInit() {
     document.body.style.overflow = 'hidden'; // scroll'u kapat

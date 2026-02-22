@@ -1,0 +1,28 @@
+:root {
+  --bs-primary: #20ae4c;
+}
+
+.toolp-container{
+  color: #20ae4c;
+}
+
+ 
+
+.slider-items{
+ font-family: monaco,Consolas,Lucida Console,monospace; 
+}
+
+.example-container {
+  /* Calculate height: Full screen minus the toolbar height */
+ position: fixed;
+  margin-top: 2rem;
+  border: none;
+}
+
+
+/* This targets the internal Material content area specifically */
+mat-drawer-content {
+  overflow-x: hidden !important; /* Get rid of horizontal scroll */
+  display: flex;
+  flex-direction: column;
+}

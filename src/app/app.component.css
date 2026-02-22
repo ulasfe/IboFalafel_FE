@@ -62,7 +62,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(245, 243, 243, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,9 +87,40 @@
     transform: scale(1.1);
   }
 }
+
+.main-wrapper {
+  padding-top: 5rem; /* Adjust this value if your toolbar is taller */
+  height: 100vh!important; 
+  overflow-x: hidden !important; /* Get rid of horizontal scroll */
+  display: flex;
+  flex-direction: column;
+}
+
 .countdown-text {
   margin-top: 20px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color: #f0ecec;
+}
+.about-us {
+  background: #fafafa;
+}
+
+.about-container {
+  
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #444;
 }

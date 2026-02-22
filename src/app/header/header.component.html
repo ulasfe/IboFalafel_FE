@@ -1,9 +1,29 @@
-<nav class="fixed top-0 left-0 w-full bg-red-600 bg-opacity-50 py-3 z-50">
+
+  <mat-toolbar class="fixed top-0 left-0 w-full bg-opacity-50 py-3 z-50">
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span></span> 
+  <button routerLink="">
   <ul class="flex justify-around text-white font-semibold">
-    <li><a (click)="scrollTo('home')">Home</a></li>
-    <li><a (click)="scrollTo('gallery')">Galery</a></li>
-    <li><a (click)="scrollTo('game-container')">🎮 Game</a></li> <!-- YENİ EKLENEN -->
-    <li><a (click)="scrollTo('survey')">Feedback</a></li>
-    <li><a (click)="scrollTo('final')">Rate us :)</a></li>    
+    <img src="/Ibo_Logo.png" class="w-20 h-20  rounded-2xl  transition duration-300" >
   </ul>
-</nav>
+  </button>
+</mat-toolbar>
+
+
+<mat-drawer-container>
+  <mat-drawer #drawer class="pt-1 example-container" mode="side">
+    <button (click)="showFiller = !showFiller" matButton="elevated"></button>
+    <mat-nav-list class="slider-items">
+      <a mat-list-item routerLink="food" (click)="drawer.close()">Food</a>
+      <a mat-list-item routerLink="drinks"(click)="drawer.close()">Drinks</a>
+      <a mat-list-item routerLink="contact" (click)="drawer.close()">Contact Us</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content >
+  <div class="pt-10">
+      <router-outlet></router-outlet>
+  </div>
+  </mat-drawer-content>
+</mat-drawer-container>
