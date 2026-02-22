@@ -1,10 +1,10 @@
 
   <mat-toolbar class="fixed top-0 left-0 w-full bg-opacity-50 py-3 z-50">
-  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggle()">
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggle();" >
     <mat-icon>menu</mat-icon>
   </button>
   <span></span> 
-  <button routerLink="">
+  <button routerLink="" (click)=" drawer.close()">
   <ul class="flex justify-around text-white font-semibold">
     <img src="/Ibo_Logo.png" class="w-20 h-20  rounded-2xl  transition duration-300" >
   </ul>
