@@ -14,7 +14,7 @@
 
 .example-container {
   /* Calculate height: Full screen minus the toolbar height */
- position: fixed;
+  position: fixed;
   margin-top: 2rem;
   border: none;
 }
