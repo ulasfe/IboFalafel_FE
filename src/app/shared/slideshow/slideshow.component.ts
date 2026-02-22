@@ -31,9 +31,9 @@ import {
 export class SlideshowComponent implements OnInit {
 
   slides = [
-    { title: '', image: '../photo1.jpg', route: '/music' },
-    { title: '', image: '../photo2.jpg', route: '/acting' },
-    { title: '', image: '../photo3.jpg', route: '/art' }
+    { title: '', image: '../photo1.jpg', route: '/food' },
+    { title: '', image: '../photo2.jpg', route: '/food' },
+    { title: '', image: '../photo3.jpg', route: '/food' }
   ];
 
   currentIndex = 0;
