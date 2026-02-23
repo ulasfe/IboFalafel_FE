@@ -9,10 +9,9 @@
     </div>
 
     <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-12">
-      
       <section>
-        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mb-6 py-2">ŚNIADANIE</h2>
-        <div *ngFor="let item of breakfastItems.slice(0,2)" class="mb-6">
+        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mb-6 py-2">WRAPS</h2>
+        <div *ngFor="let item of wrapItems" class="mb-6">
           <div class="flex justify-between font-bold text-xl">
             <span>{{ item.name }}</span>
             <span>{{ item.price | number:'1.2-2' }}</span>
@@ -22,8 +21,8 @@
       </section>
 
       <section>
-        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mb-6 py-2">ŚNIADANIE</h2>
-        <div *ngFor="let item of breakfastItems.slice(2)" class="mb-6">
+        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mb-6 py-2">SALADS</h2>
+        <div *ngFor="let item of saladItems" class="mb-6">
           <div class="flex justify-between font-bold text-xl">
             <span>{{ item.name }}</span>
             <span>{{ item.price | number:'1.2-2' }}</span>
@@ -31,13 +30,32 @@
           <p class="text-sm italic leading-tight text-green-800">{{ item.description }}</p>
         </div>
 
-        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mt-12 mb-6 py-2">DODATKI</h2>
-        <div *ngFor="let extra of extras" class="flex justify-between font-bold text-lg mb-2">
+        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mt-12 mb-6 py-2">EXTRAS</h2>
+        <div *ngFor="let extra of extraItems" class="flex justify-between font-bold text-lg mb-2">
           <span>{{ extra.name }}</span>
           <span>{{ extra.price | number:'1.2-2' }}</span>
         </div>
       </section>
-
+      <section>
+        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mb-6 py-2">GRAP A BITE</h2>
+        <div *ngFor="let item of grabItems" class="mb-6">
+          <div class="flex justify-between font-bold text-xl">
+            <span>{{ item.name }}</span>
+            <span>{{ item.price | number:'1.2-2' }}</span>
+          </div>
+          <p class="text-sm italic leading-tight text-green-800">{{ item.description }}</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="text-3xl font-bold border-b-2 border-[#006400] text-center mb-6 py-2">LIMITED EDITIONS</h2>
+        <div *ngFor="let item of limitedItems" class="mb-6">
+          <div class="flex justify-between font-bold text-xl">
+            <span>{{ item.name }}</span>
+            <span>{{ item.price | number:'1.2-2' }}</span>
+          </div>
+          <p class="text-sm italic leading-tight text-green-800">{{ item.description }}</p>
+        </div>
+      </section>
     </div>
   </div>
 </div>
