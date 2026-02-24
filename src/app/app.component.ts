@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   showGame = false;
   sound: Howl;
   isTransformed:boolean[] = [false,false,false,false,false,false,false,false,false,false,false];
-  countdown = 30;
+  countdown = 10;
   countdownInterval: any;
   slides = [
       {
