@@ -1,1 +1,96 @@
-<p class="main-wrapper">Contact test page!</p>
+<div class="min-h-screen bg-[#F9F8F3] p-12 text-[#006400]">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+    
+    <div class="flex flex-col justify-center">
+      <h1 class="text-5xl font-black mb-8">CONTACT US</h1>
+      <div class="space-y-4 text-xl">
+        <p><strong>Address:</strong> Świętego Mikołaja 15, 50-134 Wrocław</p>
+        <p>
+        <strong>Phone:</strong> 
+        <a [href]="'tel:' + phone()" class="font-bold">
+            {{ phone() }}
+        </a>
+        </p>
+        <p><strong>Hours:</strong> Mon-Sun 12:00 - 20:00</p>
+      </div>
+    </div>
+
+    <div class="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+      <google-map 
+        height="100%" 
+        width="100%" 
+        [center]="center" 
+        [zoom]="zoom"
+        [options]="options">
+        <map-marker [position]="markerPosition"></map-marker>
+      </google-map>
+    </div>
+
+  </div>
+</div>
+
+<div class="max-w-4xl mx-4 md:mx-auto my-12 p-6 bg-white rounded-3xl border-2 border-[#006400] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 transform hover:scale-[1.02] transition-transform">
+  
+  <div class="flex items-center gap-4">
+    <div class="bg-[#F9F8F3] p-4 rounded-2xl">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#EA4335">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+      </svg>
+    </div>
+    <div>
+      <h3 class="text-xl font-bold text-[#006400]">
+        {{ 'Do you love our food?' }}
+      </h3>
+      <p class="text-sm text-green-800 opacity-80">
+        {{ 'Rate us on Google Maps!' }}
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center gap-2">
+    <div class="flex text-yellow-500 mb-1">
+      <span *ngFor="let i of [1,2,3,4,5]">★</span>
+    </div>
+    <a [href]="googleReviewUrl" 
+       target="_blank" 
+       class="bg-[#006400] text-white px-8 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+       {{'WRITE A REVIEW' }}
+    </a>
+  </div>
+</div>
+
+<hr class="border-[#006400] opacity-20 my-12 mx-auto max-w-4xl">
+
+<div class="flex flex-col items-center justify-center pb-12 space-y-6">
+  <h3 class="text-2xl font-bold italic tracking-widest uppercase">Follow Us</h3>
+  
+  <div class="flex gap-8">
+    <a href="https://instagram.com/ibo_falafel" target="_blank" 
+       class="group flex flex-col items-center transition-transform hover:scale-110">
+      <div class="p-4 border-2 border-[#006400] rounded-full group-hover:bg-[#006400] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" 
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+             class="group-hover:text-white text-[#006400]">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </div>
+      <span class="mt-2 text-xs font-bold uppercase tracking-tighter">Instagram</span>
+    </a>
+
+    <a href="https://facebook.com/IboFalafelWroclaw" target="_blank" 
+       class="group flex flex-col items-center transition-transform hover:scale-110">
+      <div class="p-4 border-2 border-[#006400] rounded-full group-hover:bg-[#006400] transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" 
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+             class="group-hover:text-white text-[#006400]">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+      </div>
+      <span class="mt-2 text-xs font-bold uppercase tracking-tighter">Facebook</span>
+    </a>
+  </div>
+
+  <p class="text-[10px] opacity-50 uppercase mt-4">© 2026 Ibo Falafel Wrocław</p>
+</div>
