@@ -2,7 +2,8 @@ import { Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './pages/main/main.component'; // Your default page
 import { ErrorComponent } from './pages/error/error.component';
-
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 export const routes: Routes = [
   {
     path: '',
@@ -10,7 +11,8 @@ export const routes: Routes = [
     children: [
       // 1. THIS IS THE DEFAULT (Loads at http://localhost:4200/)
       { path: '', component: MainComponent }, 
-      
+      { path: 'login', component: AdminLoginComponent },
+      { path: 'admin-dashboard', component: AdminDashboardComponent },
       // 2. OTHER PAGES
       { 
         path: 'food', 
