@@ -12,47 +12,58 @@
   z-index: 9999;
 }
 
-/* Container that holds the 3 balls */
+/* Container for the 3 balls */
 .falafel-spinner {
   position: relative;
   width: 100px;
   height: 100px;
   animation: spin 3s linear infinite;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
-/* Base style for all falafel balls */
+/* The Falafel Ball with Sesame Structure */
 .ball {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  /* Crunchy Falafel Texture: Deep brown with lighter spots */
-  background: radial-gradient(circle at 7px 7px, #8d5524, #4e3115);
-  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4), 2px 4px 6px rgba(0,0,0,0.2);
+  width: 32px; /* Slightly larger to see the detail */
+  height: 32px;
+  border-radius: 48% 52% 50% 45%; /* Irregular shape for realism */
+  
+  /* Base color: Deep Fried Brown */
+  background-color: #5d3a1a;
+  
+  /* Sesame Layer: Tiny white/tan dots scattered using gradients */
+  background-image: 
+    radial-gradient(circle at 2px 3px, #f5e6be 1px, transparent 1.5px),
+    radial-gradient(circle at 15px 5px, #f5e6be 1px, transparent 1.5px),
+    radial-gradient(circle at 8px 12px, #f5e6be 1px, transparent 1.5px),
+    radial-gradient(circle at 22px 18px, #f5e6be 1px, transparent 1.5px),
+    radial-gradient(circle at 5px 25px, #f5e6be 1px, transparent 1.5px),
+    radial-gradient(circle at 18px 28px, #f5e6be 1px, transparent 1.5px);
+  
+  /* Adding shadows for 3D effect */
+  box-shadow: 
+    inset -3px -3px 6px rgba(0,0,0,0.5), 
+    2px 4px 8px rgba(0,0,0,0.3);
+    
+  animation: jitter 0.5s ease-in-out infinite alternate;
 }
 
-/* Positioning the 3 balls in a triangle */
+/* Positioning in a triangle */
 .ball-1 { top: 0; left: 50%; transform: translateX(-50%); }
-.ball-2 { bottom: 10%; left: 0; }
-.ball-3 { bottom: 10%; right: 0; }
+.ball-2 { bottom: 5%; left: 5%; }
+.ball-3 { bottom: 5%; right: 5%; }
 
-/* The Rotation Animation */
+/* The main rotation */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Optional: Make the balls "pulse" or bounce slightly while spinning */
-.ball {
-  animation: bounce 1.5s ease-in-out infinite alternate;
+/* Tiny "jitter" to make them look like they are frying/sizzling */
+@keyframes jitter {
+  from { transform: scale(1) translate(0, 0); }
+  to { transform: scale(1.05) translate(1px, -1px); }
 }
-
-@keyframes bounce {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
-}
-
 .loader-container {
   position: fixed;
   top: 0;
