@@ -12,48 +12,45 @@
   z-index: 9999;
 }
 
-
-/* Küçük Kalp Şekli */
-.heart {
-  width: 50px;
-  height: 45px;
-  background-color: red;
+/* Container that holds the 3 balls */
+.falafel-spinner {
   position: relative;
-  transform: rotate(-45deg);
-  animation: spin 2s linear infinite;
+  width: 100px;
+  height: 100px;
+  animation: spin 3s linear infinite;
+  margin: 20px auto;
 }
 
-/* Kalbin üst sağ yuvarlağı */
-.heart::before,
-.heart::after {
-  content: "";
+/* Base style for all falafel balls */
+.ball {
   position: absolute;
-  width: 50px;
-  height: 45px;
-  background-color: red;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  /* Crunchy Falafel Texture: Deep brown with lighter spots */
+  background: radial-gradient(circle at 7px 7px, #8d5524, #4e3115);
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4), 2px 4px 6px rgba(0,0,0,0.2);
 }
 
-/* Sol yuvarlak */
-.heart::before {
-  top: -25px;
-  left: 0;
-}
+/* Positioning the 3 balls in a triangle */
+.ball-1 { top: 0; left: 50%; transform: translateX(-50%); }
+.ball-2 { bottom: 10%; left: 0; }
+.ball-3 { bottom: 10%; right: 0; }
 
-/* Sağ yuvarlak */
-.heart::after {
-  left: 25px;
-  top: 0;
-}
-
-/* Döndürme animasyonu */
+/* The Rotation Animation */
 @keyframes spin {
-  0% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(315deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Optional: Make the balls "pulse" or bounce slightly while spinning */
+.ball {
+  animation: bounce 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
 .loader-container {
@@ -71,13 +68,6 @@
   overflow: hidden;
 }
 
-.birthday-text {
-  font-size: 2rem;
-  color: #ff4081;
-  font-weight: bold;
-  margin-bottom: 20px;
-  animation: pulse 1.5s infinite;
-}
 
 @keyframes pulse {
   0%, 100% {

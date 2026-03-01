@@ -25,7 +25,7 @@ interface Slide {
 
 export class AppComponent implements OnInit {
   isLoading = true;
-  title = 'hikayemiz';
+  title = 'Ibo Falafel';
   isPlaying = false;
   showGame = false;
   sound: Howl;
