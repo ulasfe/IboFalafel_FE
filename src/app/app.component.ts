@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   showGame = false;
   sound: Howl;
   isTransformed:boolean[] = [false,false,false,false,false,false,false,false,false,false,false];
-  countdown = 5;
+  countdown = 7;
   countdownInterval: any;
   slides = [
       {
@@ -92,10 +92,10 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => {
       if (this.isLoading) {
-        console.warn('10 saniye doldu, loader kapatıldı.');
+        console.warn('7 second finished, loader closed.');
         this.stopLoading();
       }
-    }, 5000);
+    }, 7000);
   }
 
   stopLoading() {
