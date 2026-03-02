@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
         console.warn('10 saniye doldu, loader kapatıldı.');
         this.stopLoading();
       }
-    }, 10000);
+    }, 5000);
   }
 
   stopLoading() {
