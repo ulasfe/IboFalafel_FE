@@ -26,3 +26,22 @@ mat-drawer-content {
   display: flex;
   flex-direction: column;
 }
+
+/* Makes the language selector fit nicely in the toolbar height */
+.lang-select-field {
+  width: 130px;
+  font-size: 14px;
+  margin-top: 15px; /* Adjust based on your toolbar padding */
+}
+
+/* Removes the extra padding Material adds below the select */
+::ng-deep .lang-select-field .mat-mdc-text-field-wrapper {
+  background-color: transparent!important;
+  color: rgb(12, 12, 12) !important;
+}
+
+::ng-deep .lang-select-field .mat-mdc-select-value,
+::ng-deep .lang-select-field .mat-mdc-floating-label {
+  color: rgb(10, 10, 10) !important;
+}
+
