@@ -78,9 +78,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     document.body.style.overflow = 'hidden'; // scroll'u kapat
      // Sayfa tamamen yüklendiğinde loading'i kapatmak için basit bir timeout ya da gerçek bir event
-    window.addEventListener('load', () => {
-      this.stopLoading();
-    });
+    //window.addEventListener('load', () => {
+      //this.stopLoading();
+    //});
 
     // Geri sayımı başlat
     this.countdownInterval = setInterval(() => {
@@ -91,7 +91,7 @@ export class AppComponent implements OnInit {
     }, 1000);
 
     setTimeout(() => {
-      if (this.isLoading) {
+      if (true) {
         console.warn('10 saniye doldu, loader kapatıldı.');
         this.stopLoading();
       }
