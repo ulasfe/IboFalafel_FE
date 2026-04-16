@@ -10,11 +10,8 @@
     </button>
   </div>
 
-  <div class="flex items-center mr-4 pt-5">
+  <div class="flex items-center mr-3 pt-2">
     <mat-form-field appearance="outline" class="lang-select-field">
-      <mat-label>
-        <mat-icon style="vertical-align: middle;">language</mat-icon>
-      </mat-label>
       <mat-select (selectionChange)="changeLanguage($event.value)" [value]="translate.currentLang">
         <mat-option value="en">
           <span class="flex items-center gap-2">🇬🇧  English</span>
